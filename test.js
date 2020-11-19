@@ -1,11 +1,13 @@
-function removeFirstLast(str) {
-    const hi = str.substring(1, (str.length - 1));
-    console.log(hi)
-    if (str.length === 2){
-         console.log(str)
-    }
-}
 
-removeFirstLast("hello");
-removeFirstLast("to");
-removeFirstLast("a");
+        let message = "arfiesty0@gmail.com"
+
+
+       let mail =  message.split('');
+        let arr = mail.lastIndexOf("@").valueOf();
+        let removed = mail.splice(9, arr)
+
+        console.log(arr);
+        console.log(removed);
+        console.log(mail);
+
+
