@@ -1,13 +1,14 @@
 
-        let message = "arfiesty0@gmail.com"
+        let message = "bajram@gmail.com"
 
-
-       let mail =  message.split('');
+        let mail =  message.split('');
         let arr = mail.lastIndexOf("@").valueOf();
-        let removed = mail.splice(9, arr)
+        let removed = mail.splice(10, arr)
 
-        console.log(arr);
-        console.log(removed);
-        console.log(mail);
+        let randomIndex = mail[Math.floor(Math.random() * Math.floor(mail.length))];
+        let randomIndex1 = mail[Math.floor(Math.random() * Math.floor(mail.length))];
+        let concaunated = randomIndex + randomIndex1;
+
+        console.log(concaunated);
 
 
