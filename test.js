@@ -1,14 +1,27 @@
 
-        let message = "bajram@gmail.com"
 
-        let mail =  message.split('');
-        let arr = mail.lastIndexOf("@").valueOf();
-        let removed = mail.splice(10, arr)
+        function  dotTrick(message) {
 
-        let randomIndex = mail[Math.floor(Math.random() * Math.floor(mail.length))];
-        let randomIndex1 = mail[Math.floor(Math.random() * Math.floor(mail.length))];
-        let concaunated = randomIndex + randomIndex1;
+            let mail = message.split('');
+            let arr = mail.lastIndexOf("@", mail.length - 1).valueOf();
 
-        console.log(concaunated);
 
+            let removed = mail.splice(arr, 10); // @gmail.com
+
+            // add . inside random element
+            let randomNumber = Math.floor(Math.random() * Math.floor(mail.length) + 1);
+            let bajram = mail.join("")
+            for (let i = 0; i < mail.length; i++) {
+                var randomStr = bajram.substr(0, randomNumber) + "." + bajram.substr(randomNumber);
+            }
+            console.log(randomStr.concat(removed.join('')))
+        }
+
+        dotTrick("bajram@gmail.com")
+
+
+
+        //let randomIndex = mail[Math.floor(Math.random() * Math.floor(mail.length))] + ".";
+
+        //console.log(randomIndex);
 
